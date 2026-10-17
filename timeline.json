@@ -1,0 +1,19 @@
+{
+  "_help": "Optional overrides. 'eras' maps a year (or 'undated') to a label shown beside it. 'move' maps a photo stem to a year (or 'undated'). 'markers' are obituary-based milestones shown on the timeline.",
+  "eras": {},
+  "move": {},
+  "markers": [
+    {
+      "year": 2007,
+      "text": "Your dad, his father, and his brother buy NH3 Service Company"
+    },
+    {
+      "year": 2013,
+      "text": "Your dad begins his work with Breakthrough T1D (formerly JDRF)"
+    },
+    {
+      "year": 2015,
+      "text": "NH3 Service Company is sold, and your dad wraps up LipeLine Trucking"
+    }
+  ]
+}

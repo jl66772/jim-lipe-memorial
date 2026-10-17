@@ -7,39 +7,74 @@
   "featured": "20261003-225651_oSliwZc4tGtBiap55nO5",
   "sections": [
     {
+      "id": "potd",
+      "builtin": "potd",
+      "title": "Photo of the Day",
+      "nav": null
+    },
+    {
       "id": "about",
       "title": "About Your Dad",
       "file": "content/about.html",
-      "position": "before",
       "nav": "About Dad"
     },
     {
       "id": "loved",
       "title": "Things Your Dad Loved",
       "file": "content/loved.html",
-      "position": "before",
-      "nav": "He Loved"
+      "nav": null
     },
     {
       "id": "you-and-dad",
       "title": "You & Dad",
       "file": "content/you-and-dad.html",
-      "position": "before",
-      "nav": "You & Dad"
+      "nav": null
+    },
+    {
+      "id": "photos",
+      "builtin": "photos",
+      "title": "Photos of Your Dad",
+      "nav": "Photos"
+    },
+    {
+      "id": "videos",
+      "builtin": "videos",
+      "title": "Videos of Your Dad",
+      "nav": "Videos",
+      "more": true
+    },
+    {
+      "id": "memories",
+      "builtin": "memories",
+      "title": "Ask Dad's Friends",
+      "nav": "Memories"
     },
     {
       "id": "letters",
-      "title": "Letters & Memories for James",
-      "file": "content/letters.html",
-      "position": "after",
+      "builtin": "letters",
+      "title": "Letters for Later",
       "nav": "Letters"
+    },
+    {
+      "id": "playlist",
+      "builtin": "playlist",
+      "title": "Dad's Playlist",
+      "nav": "Playlist",
+      "more": true
+    },
+    {
+      "id": "ride",
+      "title": "Ride for Jim",
+      "file": "content/ride.html",
+      "nav": "Ride for Jim",
+      "more": true
     },
     {
       "id": "service",
       "title": "Dad's Celebration of Life",
       "file": "content/service.html",
-      "position": "after",
-      "nav": "Celebration"
+      "nav": "Celebration",
+      "more": true
     }
   ],
   "page_title": "Remembering Dad – James William \"Jim\" Lipe Jr. · For James",
@@ -50,5 +85,82 @@
   "footer": "Made with love for James",
   "footer_credit": "by Diva Creations",
   "photos_nav": "Photos",
-  "videos_nav": "Videos"
+  "videos_nav": "Videos",
+  "letters_file": "/workspace/jim-memorial-letters/letters.json",
+  "share_memory_url": "",
+  "kululu_upload_url": "https://app.kululu.com/i1dfym",
+  "playlist_embed_url": "",
+  "birthday": "",
+  "birthday_note": "[Editable] Happy birthday to your dad, James. Today is a good day to look through his photos and remember him.",
+  "birthday_photo": "",
+  "remembrance_date": "09-26",
+  "remembrance_note": "[Editable] Thinking of you today, James. Your dad is remembered and missed by so many people who loved him.",
+  "remembrance_photo": "20261003-225651_oSliwZc4tGtBiap55nO5",
+  "map_regions": [
+    {
+      "id": "salinas",
+      "name": "Salinas, California",
+      "caption": "Where your dad was born, grew up, and later made his home. It's also where the family business ran.",
+      "lat": 36.677,
+      "lon": -121.655,
+      "box": [
+        36.4,
+        -122.0,
+        36.95,
+        -121.3
+      ]
+    },
+    {
+      "id": "desolation",
+      "name": "Desolation Wilderness",
+      "caption": "Where your dad went on snowmobile treks.",
+      "lat": 38.9,
+      "lon": -120.17,
+      "box": [
+        38.78,
+        -120.3,
+        39.02,
+        -120.06
+      ]
+    },
+    {
+      "id": "tahoe",
+      "name": "Lake Tahoe & Tahoma",
+      "caption": "Where your dad grew up, and later one of his homes.",
+      "lat": 39.07,
+      "lon": -120.08,
+      "box": [
+        38.75,
+        -120.35,
+        39.4,
+        -119.8
+      ]
+    },
+    {
+      "id": "alaska",
+      "name": "Alaska",
+      "caption": "Where your dad went heli-skiing.",
+      "lat": 62.0,
+      "lon": -149.0,
+      "box": [
+        51.0,
+        -180.0,
+        72.0,
+        -129.0
+      ]
+    },
+    {
+      "id": "baja",
+      "name": "Baja California",
+      "caption": "Where your dad rode dirt bikes.",
+      "lat": 30.0,
+      "lon": -115.0,
+      "box": [
+        22.5,
+        -117.4,
+        32.75,
+        -109.0
+      ]
+    }
+  ]
 }
