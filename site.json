@@ -1,0 +1,25 @@
+{
+  "source_dir": "/workspace/kululu/Celebration_of_Life_-_Jim_Lipe_Jr.",
+  "title": "In Loving Memory of Jim",
+  "full_name": "James William \"Jim\" Lipe Jr.",
+  "dates": "Salinas, California · Passed away September 26, 2026, at age 56",
+  "dedication": "Made with love for James, so the memories of her dad, Jim, are always close.",
+  "featured": "20261003-225651_oSliwZc4tGtBiap55nO5",
+  "sections": [
+    {
+      "id": "tribute",
+      "title": "Tribute",
+      "file": "content/tribute.html"
+    },
+    {
+      "id": "stories",
+      "title": "Stories & Memories",
+      "file": "content/stories.html"
+    },
+    {
+      "id": "service",
+      "title": "Celebration of Life",
+      "file": "content/service.html"
+    }
+  ]
+}

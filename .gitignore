@@ -1,0 +1,7 @@
+preview/
+__pycache__/
+*.pyc
+.venv/
+.pwvenv/
+*.tmp.mp4
+.DS_Store
