@@ -1,25 +1,54 @@
 {
   "source_dir": "/workspace/kululu/Celebration_of_Life_-_Jim_Lipe_Jr.",
-  "title": "In Loving Memory of Jim",
+  "title": "Remembering Dad",
   "full_name": "James William \"Jim\" Lipe Jr.",
   "dates": "Salinas, California · Passed away September 26, 2026, at age 56",
-  "dedication": "Made with love for James, so the memories of her dad, Jim, are always close.",
+  "dedication": "James, this is a place to remember your dad. The people who loved him shared these photos and memories so you can come back to them any time.",
   "featured": "20261003-225651_oSliwZc4tGtBiap55nO5",
   "sections": [
     {
-      "id": "tribute",
-      "title": "Tribute",
-      "file": "content/tribute.html"
+      "id": "about",
+      "title": "About Your Dad",
+      "file": "content/about.html",
+      "position": "before",
+      "nav": "About Dad"
     },
     {
-      "id": "stories",
-      "title": "Stories & Memories",
-      "file": "content/stories.html"
+      "id": "loved",
+      "title": "Things Your Dad Loved",
+      "file": "content/loved.html",
+      "position": "before",
+      "nav": "He Loved"
+    },
+    {
+      "id": "you-and-dad",
+      "title": "You & Dad",
+      "file": "content/you-and-dad.html",
+      "position": "before",
+      "nav": "You & Dad"
+    },
+    {
+      "id": "letters",
+      "title": "Letters & Memories for James",
+      "file": "content/letters.html",
+      "position": "after",
+      "nav": "Letters"
     },
     {
       "id": "service",
-      "title": "Celebration of Life",
-      "file": "content/service.html"
+      "title": "Dad's Celebration of Life",
+      "file": "content/service.html",
+      "position": "after",
+      "nav": "Celebration"
     }
-  ]
+  ],
+  "page_title": "Remembering Dad – James William \"Jim\" Lipe Jr. · For James",
+  "eyebrow": "For James",
+  "photos_title": "Photos of Your Dad",
+  "photos_note": "{n} photos shared by family and friends who loved him",
+  "videos_title": "Videos of Your Dad",
+  "footer": "Made with love for James",
+  "footer_credit": "by Diva Creations",
+  "photos_nav": "Photos",
+  "videos_nav": "Videos"
 }

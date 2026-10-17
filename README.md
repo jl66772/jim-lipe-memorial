@@ -8,7 +8,9 @@ A static site: `index.html`, `assets/`, `media/`. There's no build tooling beyon
 
 ## Edit content
 - `site.json`: title, name, dates, dedication, featured photo (a file stem from the source folder), and the section list and order.
-- `content/*.html`: the HTML for each section. To add a section, create a file and add `{"id","title","file"}` to `sections`. The first section appears before Photos and the rest come after Videos.
+- Framing (made for James): `site.json` keys `page_title`, `eyebrow`, `title`, `dedication` (her opening note), `photos_title`/`photos_note`/`videos_title`, `footer`/`footer_credit`.
+- Sections: each entry has `id`, `title`, `nav` (short menu label), `file`, and `position` (`before` = above Photos, `after` = below Videos). Current order: About Your Dad, Things Your Dad Loved (cards in `content/loved.html`), You & Dad, then Photos and Videos, then Letters & Memories for James and Dad's Celebration of Life.
+- `content/*.html`: the HTML for each section. To add a section, create a file and add `{"id","title","file"}` to `sections`. 
 
 ## Media processing
 Photos become 1600px WebP (lightbox) and 400px square WebP thumbs. Images are re-encoded, so EXIF and GPS data are stripped. GIFs use their first frame.

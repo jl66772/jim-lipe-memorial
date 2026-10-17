@@ -48,24 +48,29 @@ def main():
     feat = os.path.splitext(feat)[0]
     e = html.escape
     secs = CFG['sections']
-    nav = ''.join(f'<a href="#{s["id"]}">{e(s["title"])}</a>' for s in secs[:1]) + '<a href="#photos">Photos</a>' + \
-          ('<a href="#videos">Videos</a>' if vstems else '') + ''.join(f'<a href="#{s["id"]}">{e(s["title"])}</a>' for s in secs[1:])
+    before = [s for s in secs if s.get('position','after') == 'before']
+    after = [s for s in secs if s.get('position','after') != 'before']
+    navl = [(s['id'], s.get('nav', s['title'])) for s in before] + [('photos', CFG.get('photos_nav','Photos'))]
+    if vstems: navl.append(('videos', CFG.get('videos_nav','Videos')))
+    navl += [(s['id'], s.get('nav', s['title'])) for s in after]
+    nav = ''.join(f'<a href="#{i}">{e(t)}</a>' for i, t in navl)
     def sec(s): return f'<section id="{s["id"]}"><h2>{e(s["title"])}</h2>\n{open(os.path.join(ROOT,s["file"])).read()}</section>\n'
-    grid = '\n'.join(f'<a href="media/full/{s}.webp"><img src="media/thumb/{s}.webp" loading="lazy" decoding="async" width="400" height="400" alt="Photo of Jim shared by a guest"></a>' for s in stems)
+    grid = '\n'.join(f'<a href="media/full/{s}.webp"><img src="media/thumb/{s}.webp" loading="lazy" decoding="async" width="400" height="400" alt="Photo of Jim shared by family and friends"></a>' for s in stems)
     vids = '\n'.join(f'<video controls preload="none" playsinline poster="media/video/{s}.jpg" src="media/video/{s}.mp4"></video>' for s in vstems)
+    note = CFG.get('photos_note','{n} photos').format(n=len(stems))
     page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{e(CFG["title"])} – {e(CFG["full_name"])}</title><meta name="robots" content="noindex"><link rel="stylesheet" href="assets/style.css"></head><body>
+<title>{e(CFG.get("page_title", CFG["title"]))}</title><meta name="robots" content="noindex"><link rel="stylesheet" href="assets/style.css"></head><body>
 <nav>{nav}</nav>
 <header class="hero"><img src="media/full/{feat}.webp" alt="{e(CFG["full_name"])}">
-<div class="eyebrow">In Loving Memory</div><h1>{e(CFG["full_name"])}</h1><div class="dates">{e(CFG["dates"])}</div>
+<div class="eyebrow">{e(CFG.get("eyebrow","In Loving Memory"))}</div><h1>{e(CFG["title"])}</h1><div class="subname">{e(CFG["full_name"])}</div><div class="dates">{e(CFG["dates"])}</div>
 <p class="dedication">{e(CFG["dedication"])}</p></header>
-{sec(secs[0])}
-<section id="photos"><h2>Photos</h2><p class="placeholder" style="font-style:normal">{len(stems)} photos shared by family and friends</p><div class="grid">
+{''.join(sec(s) for s in before)}
+<section id="photos"><h2>{e(CFG.get("photos_title","Photos"))}</h2><p class="placeholder" style="font-style:normal">{e(note)}</p><div class="grid">
 {grid}
 </div></section>
-{f'<section id="videos"><h2>Videos</h2><div class="videos">{vids}</div></section>' if vstems else ''}
-{''.join(sec(s) for s in secs[1:])}
-<footer>With love, for James &middot; Made by Diva Creations</footer>
+{f'<section id="videos"><h2>{e(CFG.get("videos_title","Videos"))}</h2><div class="videos">{vids}</div></section>' if vstems else ''}
+{''.join(sec(s) for s in after)}
+<footer>{e(CFG.get("footer",""))}<span class="credit">{e(CFG.get("footer_credit",""))}</span></footer>
 <div id="lb"><button class="close" aria-label="Close">&times;</button><button class="prev" aria-label="Previous">&#8249;</button><img alt=""><button class="next" aria-label="Next">&#8250;</button><div class="count"></div></div>
 <script src="assets/lightbox.js"></script></body></html>'''
     open(os.path.join(ROOT,'index.html'),'w').write(page)

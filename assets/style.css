@@ -24,3 +24,8 @@ section{scroll-margin-top:3.5rem}@media(max-width:600px){section{scroll-margin-t
 .prose{max-width:40rem;margin:0 auto}.prose.center{text-align:center}.small{color:var(--muted);font-size:.9rem}
 .cta{text-align:center;margin-top:1.5rem}.cta a{display:inline-block;padding:.6rem 1.3rem;border:1px solid var(--accent);border-radius:999px;color:var(--accent);text-decoration:none;font-family:system-ui,sans-serif;font-size:.95rem}.cta a:hover{background:var(--accent);color:#fff}
 section a{color:var(--accent)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;max-width:52rem;margin:0 auto}
+.card{background:var(--card);border:1px solid #eadfce;border-radius:12px;padding:1.2rem;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.card span{font-size:2rem}.card h3{font-weight:normal;margin:.4rem 0 .2rem;font-size:1.15rem}.card p{margin:0;color:var(--muted);font-size:.92rem}
+.hero .subname{font-size:1.25rem;margin:.2rem 0}footer .credit{display:block;font-size:.75rem;opacity:.7;margin-top:.3rem}
+@media(max-width:600px){nav{white-space:nowrap;overflow-x:auto;text-align:left}section{scroll-margin-top:3.5rem}}
